@@ -23,9 +23,10 @@ Naik Jitesh | Developer Portfolio
 
 ##  Deployment
 Hosted using GitHub Pages.
+Portfolio is live now
 
 ##  Connect With Me
 - LinkedIn: https://www.linkedin.com/in/naik-jitesh-mahabaleshwar
 - GitHub: https://github.com/Jitesh3103
-mail : naikjiteshm@gmail.com
+- mail : naikjiteshm@gmail.com
 - Portfolio: https://jitesh3103.github.io/jitesh-portfolio/
