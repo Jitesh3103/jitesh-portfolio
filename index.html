@@ -75,19 +75,17 @@
             <img src="profile.jpg" alt="Jitesh Naik">
           </div>
 
-          <p class="hero-eyebrow">SOFTWARE DEVELOPER · DATA SCIENCE</p>
+          <p class="hero-eyebrow">SOFTWARE DEVELOPER · OPEN FOR FREELANCE</p>
 
           <h1>
             Hi, I'm Naik Jitesh Mahabaleshwar,
-            <span class="hero-muted">
-              Software Developer and Data Science.
-            </span>
+            <span class="role-text"></span>
           </h1>
 
           <p class="hero-description">
             I'm a CSE (Data Science) graduate. I build web applications, AI-powered tools,
             and data-driven solutions. I enjoy turning ideas into useful
-            products and exploring new technologies.
+            products and exploring new technologies.Open to full-time opportunities and freelance projects.
           </p>
 
 
@@ -489,6 +487,25 @@
             <!-- 8. Portfolio -->
             <article class="project-card">
               <span class="project-number">08</span>
+              <span class="project-tag">Web page</span>
+              <h3>Calculator || A Simple Calculator</h3>
+              <p>
+                Developed a simple web-based calculator for performing basic arithmetic operations with a user-friendly
+                interface and responsive design for various devices.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span>
+                <span>JavaScript</span><span>Responsive Design</span>
+                <span>Web development</span>
+              </div>
+              <a href="https://github.com/Jitesh3103" target="_blank" rel="noopener noreferrer" class="project-link">
+                View Project ↗
+              </a>
+            </article>
+
+            <!-- 9. Portfolio -->
+            <article class="project-card">
+              <span class="project-number">09</span>
               <span class="project-tag">Personal Website</span>
               <h3>Developer Portfolio</h3>
               <p>
@@ -543,8 +560,7 @@
           </a>
 
           <!-- 02 -->
-          <a href="certificates/forage.pdf" class="card cert-card" target="_blank"
-            rel="noopener noreferrer">
+          <a href="certificates/forage.pdf" class="card cert-card" target="_blank" rel="noopener noreferrer">
             <div class="cert-icon">02</div>
             <div>
               <h3>Data Science Job Simulation</h3>
@@ -554,8 +570,7 @@
           </a>
 
           <!-- 03 -->
-          <a href="certificates/Ibm.pdf" class="card cert-card" target="_blank"
-            rel="noopener noreferrer">
+          <a href="certificates/Ibm.pdf" class="card cert-card" target="_blank" rel="noopener noreferrer">
             <div class="cert-icon">03</div>
             <div>
               <h3>Web Development Basics</h3>
@@ -565,8 +580,7 @@
           </a>
 
           <!-- 04 -->
-          <a href="certificates/udemy.pdf" class="card cert-card" target="_blank"
-            rel="noopener noreferrer">
+          <a href="certificates/udemy.pdf" class="card cert-card" target="_blank" rel="noopener noreferrer">
             <div class="cert-icon">04</div>
             <div>
               <h3>Data Analysis</h3>
@@ -576,8 +590,7 @@
           </a>
 
           <!-- 05 -->
-          <a href="certificates/iot.pdf" class="card cert-card" target="_blank"
-            rel="noopener noreferrer">
+          <a href="certificates/iot.pdf" class="card cert-card" target="_blank" rel="noopener noreferrer">
             <div class="cert-icon">05</div>
             <div>
               <h3>Water Irrigation System — IoT</h3>
@@ -587,8 +600,7 @@
           </a>
 
           <!-- 06 -->
-          <a href="certificates/cybersecurity.pdf" class="card cert-card" target="_blank"
-            rel="noopener noreferrer">
+          <a href="certificates/cybersecurity.pdf" class="card cert-card" target="_blank" rel="noopener noreferrer">
             <div class="cert-icon">05</div>
             <div>
               <h3>Cybersecurity</h3>
@@ -598,8 +610,7 @@
           </a>
 
           <!-- 07 -->
-          <a href="certificates/Hackathon.pdf" class="card cert-card" target="_blank"
-            rel="noopener noreferrer">
+          <a href="certificates/Hackathon.pdf" class="card cert-card" target="_blank" rel="noopener noreferrer">
             <div class="cert-icon">07</div>
             <div>
               <h3>Hackathon</h3>
@@ -609,8 +620,7 @@
           </a>
 
           <!-- 08 -->
-          <a href="certificates/skillsbuildibm.pdf" &  class="card cert-card"
-            rel="noopener noreferrer">
+          <a href="certificates/skillsbuildibm.pdf" & class="card cert-card" rel="noopener noreferrer">
             <div class="cert-icon">08</div>
             <div>
               <h3>IBM SkillsBuild Web Developer</h3>
@@ -636,7 +646,8 @@
             <p class="unified-contact-message">
               I'm interested in full-time opportunities in software development,
               full-stack engineering, data analytics, and data science.
-              Have a project idea or opportunity? Feel free to reach out.
+              Have a project idea or an opportunity in mind? I'm open to freelance projects, collaborations, and
+              full-time roles. Feel free to get in touch!
             </p>
           </div>
 
@@ -896,6 +907,46 @@
     })();
   </script>
 
+  <script>
+    const roles = [
+      "Software Developer",
+      "Full-Stack Developer",
+      "Data Scientist",
+      "Software Engineer",
+      "UI/UX Designer",
+      "AI Developer"
+    ];
+
+    const roleElement = document.querySelector(".role-text");
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeRole() {
+      const currentRole = roles[roleIndex];
+
+      roleElement.textContent = deleting
+        ? currentRole.substring(0, charIndex--)
+        : currentRole.substring(0, charIndex++);
+
+      let delay = deleting ? 45 : 90;
+
+      if (!deleting && charIndex > currentRole.length) {
+        deleting = true;
+        delay = 1200;
+      } else if (deleting && charIndex < 0) {
+        deleting = false;
+        charIndex = 0;
+        roleIndex = (roleIndex + 1) % roles.length;
+        delay = 300;
+      }
+
+      setTimeout(typeRole, delay);
+    }
+
+    typeRole();
+  </script>
 
 </body>
 

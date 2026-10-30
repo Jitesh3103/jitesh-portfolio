@@ -4463,3 +4463,22 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.role-text {
+  color: #b9a5ff;
+  display: inline;
+  white-space: normal;
+}
+
+.role-text::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink-cursor 0.7s infinite;
+}
+
+@keyframes blink-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
