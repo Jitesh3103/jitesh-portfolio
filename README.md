@@ -1,4 +1,4 @@
-﻿# Jitesh Naik — Personal Portfolio
+﻿# Naik Jitesh Mahabaleshwar — Personal Portfolio
 
 Naik Jitesh Mahabaleshwar
 Jitesh.
